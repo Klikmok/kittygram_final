@@ -1,14 +1,16 @@
 # flake8: noqa
 import os
 from pathlib import Path
+from decouple import config
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = config('SECRET_KEY', default='')
 
-DEBUG = os.getenv('DEBUG', '')
+DEBUG = config('DEBUG', default='')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost')
+ALLOWED_HOSTS = [config('ALLOWED_HOSTS1', default=''), config('ALLOWED_HOSTS2', default=''), config('ALLOWED_HOSTS3', default=''), config('ALLOWED_HOSTS4', default='')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
