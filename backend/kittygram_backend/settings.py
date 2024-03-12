@@ -6,11 +6,11 @@ from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config('SECRET_KEY', default='1234')
+SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
 
-DEBUG = config('DEBUG', default='False')
+DEBUG = True
 
-ALLOWED_HOSTS = ['k1ttygram.sytes.net', 'localhost', '127.0.0.1', '84.252.140.228']
+ALLOWED_HOSTS = ['k1ttygram.sytes.net', '84.252.140.228', '127.0.0.1', 'localhost'] 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
