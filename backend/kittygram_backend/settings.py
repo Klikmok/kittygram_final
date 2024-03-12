@@ -1,5 +1,6 @@
 # flake8: noqa
 import os
+import json
 from pathlib import Path
 
 
@@ -9,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '123')
 
 DEBUG = os.getenv('DEBUG', 'False')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '')
+ALLOWED_HOSTS = json.loads(os.environ['ALLOWED_HOSTS'])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
