@@ -6,9 +6,9 @@ from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config('SECRET_KEY', default='')
+SECRET_KEY = config('SECRET_KEY', default='1234')
 
-DEBUG = config('DEBUG', default='')
+DEBUG = config('DEBUG', default='False')
 
 ALLOWED_HOSTS = ['k1ttygram.sytes.net', 'localhost', '127.0.0.1', '84.252.140.228']
 
