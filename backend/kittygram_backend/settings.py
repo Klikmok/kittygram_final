@@ -3,13 +3,14 @@ import os
 from pathlib import Path
 from decouple import config
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='')
 
 DEBUG = config('DEBUG', default='')
 
-ALLOWED_HOSTS = [config('ALLOWED_HOSTS1', default=''), config('ALLOWED_HOSTS2', default=''), config('ALLOWED_HOSTS3', default=''), config('ALLOWED_HOSTS4', default='')]
+ALLOWED_HOSTS = ['k1ttygram.sytes.net', 'localhost', '127.0.0.1', '84.252.140.228']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
